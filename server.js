@@ -3,9 +3,13 @@ const multer = require('multer');
 const upload = multer({
   dest: 'uploads/' 
 }); 
-
+const http = require('http');
+const port=process.env.PORT || 3000
+const server = http.createServer((req, res) => {
 const app = express();
-
+server.listen(port,() => {
+  console.log(`Server running at port `+port);
+  });
 
 //handles html
 app.get('/', (req, res) => {
