@@ -1,15 +1,24 @@
+//const http = require('http');
+
+
 const express = require('express');
 const multer = require('multer');
 const upload = multer({
   dest: 'uploads/' 
 }); 
-const http = require('http');
-const port=process.env.PORT || 3000
-const server = http.createServer((req, res) => {
 const app = express();
-server.listen(port,() => {
-  console.log(`Server running at port `+port);
-  });
+
+
+// const port=process.env.PORT || 3000
+// const server = http.createServer((req, res) => {
+//   res.statusCode = 200;
+// });
+
+// server.listen(port,() => {
+//   console.log(`Server running at port `+port);
+//   });
+
+
 
 //handles html
 app.get('/', (req, res) => {
@@ -23,7 +32,9 @@ app.post('/', upload.single('file-to-upload'), (req, res) => {
   res.redirect('/');
 });
 
-//app.listen(3000);
+app.listen(3000);
+
+
 
 //post to handle upload
 // router.post('/', uploadStrategy, async (req, res) => {

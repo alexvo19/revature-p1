@@ -3,7 +3,8 @@ az group create --location southcentralus --name myResourceGroup
 
 
 #create storage account
-az storage account create --myStorageAccount -g myResourceGroup --access-tier hot --location southcentralus
+az storage account create --myStorageAccount -g myResourceGroup \
+--access-tier hot --location southcentralus
 
 
 #create blob storage container
@@ -14,7 +15,8 @@ az storage container create -n myBlobStorage --account-name myStorageAccount \
 --account-key $blobStorageAccountKey
 
 #create appservice plan
-az appservice plan create --name myPlan --resource-group myResourceGroup --is-linux --location southcentralus --number-of-workers 3 --sku B1
+az appservice plan create --name myPlan --resource-group myResourceGroup \
+--is-linux --location southcentralus --number-of-workers 3 --sku B1
 
 
 #create web app and links git repo
