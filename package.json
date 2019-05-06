@@ -1,14 +1,26 @@
 {
   "name": "examples",
   "version": "1.0.0",
-  "description": "",
   "main": "node.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@azure/cosmos": "^2.1.5"
-  }
+    "@azure/cosmos": "^2.1.5",
+    "express": "^4.16.4",
+    "multer": "^1.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexvo19/revature-p1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alexvo19/revature-p1/issues"
+  },
+  "homepage": "https://github.com/alexvo19/revature-p1#readme",
+  "devDependencies": {},
+  "description": ""
 }
